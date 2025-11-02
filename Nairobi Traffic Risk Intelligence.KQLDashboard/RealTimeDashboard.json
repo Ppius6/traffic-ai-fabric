@@ -1,0 +1,348 @@
+{
+  "schema_version": 63,
+  "tiles": [
+    {
+      "id": "e6c59102-f9bc-483a-ba7a-029f26505279",
+      "queryRef": {
+        "kind": "query",
+        "queryId": "963755c2-fa2a-4978-add5-aedf748b253e"
+      },
+      "title": "Live Risk Heatmap",
+      "visualType": "map",
+      "pageId": "b034439c-d1ce-4d4c-9fdb-482c4455db4d",
+      "layout": {
+        "x": 9,
+        "y": 0,
+        "width": 7,
+        "height": 23
+      },
+      "visualOptions": {
+        "map__latitudeColumn": null,
+        "map__longitudeColumn": null,
+        "map__labelColumn": null,
+        "map__sizeColumn": null,
+        "map__sizeDisabled": true,
+        "map__geoType": "infer",
+        "map__geoPointColumn": null
+      }
+    },
+    {
+      "id": "b179adfa-6d1b-439c-bb09-7ab6fe55adbf",
+      "title": "Active High-Risk Zones",
+      "visualType": "card",
+      "pageId": "b034439c-d1ce-4d4c-9fdb-482c4455db4d",
+      "layout": {
+        "x": 0,
+        "y": 0,
+        "width": 4,
+        "height": 3
+      },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "d6079c87-cd79-44e9-853f-5afa509f5bca"
+      },
+      "visualOptions": {
+        "multiStat__textSize": "auto",
+        "multiStat__valueColumn": null,
+        "colorRulesDisabled": false,
+        "colorRules": [
+          {
+            "id": "cb9f028f-3e73-4c58-8928-fdf8758e35e0",
+            "ruleType": "colorByCondition",
+            "applyToColumn": null,
+            "hideText": false,
+            "applyTo": "cells",
+            "conditions": [
+              {
+                "operator": ">",
+                "column": "HighRiskCount",
+                "values": [
+                  "10"
+                ]
+              }
+            ],
+            "chainingOperator": "and",
+            "colorStyle": "bold",
+            "color": "red",
+            "tag": "",
+            "icon": null,
+            "ruleName": "",
+            "visualType": "card"
+          },
+          {
+            "id": "42ff987e-1567-494c-9bdb-cde9e32d3977",
+            "ruleType": "colorByCondition",
+            "applyToColumn": null,
+            "hideText": false,
+            "applyTo": "cells",
+            "conditions": [
+              {
+                "operator": ">",
+                "column": "HighRiskCount",
+                "values": [
+                  "5"
+                ]
+              }
+            ],
+            "chainingOperator": "and",
+            "colorStyle": "bold",
+            "color": "yellow",
+            "tag": "",
+            "icon": null,
+            "ruleName": "",
+            "visualType": "card"
+          }
+        ]
+      }
+    },
+    {
+      "id": "1e587e97-18b8-458a-bebf-d6f77fd0e371",
+      "title": "Traffic Density & Risk Trends",
+      "visualType": "line",
+      "pageId": "b034439c-d1ce-4d4c-9fdb-482c4455db4d",
+      "layout": {
+        "x": 4,
+        "y": 0,
+        "width": 5,
+        "height": 11
+      },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "bfaa6bd9-fcf9-4ba7-ae6a-dd7950ad2b61"
+      },
+      "visualOptions": {
+        "multipleYAxes": {
+          "base": {
+            "id": "-1",
+            "label": "",
+            "columns": [],
+            "yAxisMaximumValue": null,
+            "yAxisMinimumValue": null,
+            "yAxisScale": "linear",
+            "horizontalLines": []
+          },
+          "additional": [],
+          "showMultiplePanels": false
+        },
+        "hideLegend": false,
+        "legendLocation": "bottom",
+        "xColumnTitle": "",
+        "xColumn": null,
+        "yColumns": null,
+        "seriesColumns": null,
+        "xAxisScale": "linear",
+        "verticalLine": "",
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "crossFilter": [],
+        "drillthrough": []
+      }
+    },
+    {
+      "id": "630aae25-278e-4171-9d74-ee00eeb2f3e9",
+      "title": "Live Traffic Events",
+      "visualType": "table",
+      "pageId": "b034439c-d1ce-4d4c-9fdb-482c4455db4d",
+      "layout": {
+        "x": 0,
+        "y": 11,
+        "width": 9,
+        "height": 12
+      },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "b19f6d0d-5782-4cc7-aec8-05baa9f6210d"
+      },
+      "visualOptions": {
+        "table__enableRenderLinks": true,
+        "colorRulesDisabled": false,
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "crossFilter": [],
+        "drillthrough": [],
+        "table__renderLinks": [],
+        "colorRules": [
+          {
+            "id": "584bc959-ef12-4a1c-8a75-de611abb7e7b",
+            "ruleType": "colorByCondition",
+            "applyToColumn": null,
+            "hideText": false,
+            "applyTo": "cells",
+            "conditions": [
+              {
+                "operator": ">=",
+                "column": "Density",
+                "values": [
+                  "80"
+                ]
+              }
+            ],
+            "chainingOperator": "and",
+            "colorStyle": "bold",
+            "color": "red",
+            "tag": "",
+            "icon": null,
+            "ruleName": "",
+            "visualType": "table"
+          },
+          {
+            "id": "798d9faa-88d0-4ccd-816c-a3a8dd1a5a3c",
+            "ruleType": "colorByCondition",
+            "applyToColumn": null,
+            "hideText": false,
+            "applyTo": "cells",
+            "conditions": [
+              {
+                "operator": ">=",
+                "column": "Density",
+                "values": [
+                  "60"
+                ]
+              },
+              {
+                "operator": "<=",
+                "column": "Density",
+                "values": [
+                  "79"
+                ]
+              }
+            ],
+            "chainingOperator": "and",
+            "colorStyle": "bold",
+            "color": "yellow",
+            "tag": "",
+            "icon": null,
+            "ruleName": "",
+            "visualType": "table"
+          }
+        ]
+      }
+    },
+    {
+      "id": "f1f63444-43bc-4bcf-8e06-5fb9811e834e",
+      "title": "Weather Impact on Traffic",
+      "visualType": "bar",
+      "pageId": "b034439c-d1ce-4d4c-9fdb-482c4455db4d",
+      "layout": {
+        "x": 0,
+        "y": 3,
+        "width": 4,
+        "height": 8
+      },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "48587827-7481-4d33-9082-a436877d6f84"
+      },
+      "visualOptions": {
+        "multipleYAxes": {
+          "base": {
+            "id": "-1",
+            "label": "",
+            "columns": [],
+            "yAxisMaximumValue": null,
+            "yAxisMinimumValue": null,
+            "yAxisScale": "linear",
+            "horizontalLines": []
+          },
+          "additional": [],
+          "showMultiplePanels": false
+        },
+        "hideLegend": false,
+        "legendLocation": "bottom",
+        "xColumnTitle": "",
+        "xColumn": null,
+        "yColumns": null,
+        "seriesColumns": null,
+        "xAxisScale": "linear",
+        "verticalLine": "",
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "crossFilter": [],
+        "drillthrough": []
+      }
+    }
+  ],
+  "baseQueries": [],
+  "parameters": [
+    {
+      "kind": "duration",
+      "id": "822e1e3b-33b5-492a-b198-8b8d8a5ad3ff",
+      "displayName": "Time range",
+      "description": "",
+      "beginVariableName": "_startTime",
+      "endVariableName": "_endTime",
+      "defaultValue": {
+        "kind": "dynamic",
+        "count": 1,
+        "unit": "hours"
+      },
+      "showOnPages": {
+        "kind": "all"
+      }
+    }
+  ],
+  "dataSources": [
+    {
+      "id": "6d0f7d51-1153-4adb-9882-a995661a5c1d",
+      "kind": "kusto-trident",
+      "clusterUri": "",
+      "database": "473e52c3-2ceb-a303-49ca-35febd9dbd5e",
+      "name": "NairobiRisksDB",
+      "scopeId": "kusto-trident",
+      "workspace": "00000000-0000-0000-0000-000000000000"
+    }
+  ],
+  "pages": [
+    {
+      "name": "Page 1",
+      "id": "b034439c-d1ce-4d4c-9fdb-482c4455db4d"
+    }
+  ],
+  "queries": [
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "6d0f7d51-1153-4adb-9882-a995661a5c1d"
+      },
+      "text": "EnhancedTrafficEvents\r\n| where Timestamp > ago(15m)\r\n| summarize \r\n    EventCount = count(),\r\n    AvgDensity = round(avg(TrafficDensity), 1),\r\n    AvgRiskScore = round(avg(RiskScore), 3),\r\n    HighRiskCount = countif(RiskLevel == \"High\"),\r\n    LatestAlert = max(Timestamp)\r\n    by LocationName, RoadName, Latitude, Longitude\r\n| extend \r\n    RiskLevel = case(\r\n        AvgRiskScore >= 0.7, \"High\",\r\n        AvgRiskScore >= 0.5, \"Medium\",\r\n        \"Low\"\r\n    ),\r\n    RiskColor = case(\r\n        AvgRiskScore >= 0.7, \"red\",\r\n        AvgRiskScore >= 0.5, \"orange\",\r\n        \"green\"\r\n    ),\r\n    Size = case(\r\n        EventCount >= 10, \"large\",\r\n        EventCount >= 5, \"medium\", \r\n        \"small\"\r\n    )\r\n| project \r\n    Longitude, \r\n    Latitude, \r\n    Title = strcat(LocationName, \" - \", RoadName),\r\n    Description = strcat(\r\n        \"Density: \", tostring(AvgDensity), \"%, \",\r\n        \"Risk: \", tostring(AvgRiskScore), \", \",\r\n        \"Events: \", tostring(EventCount)\r\n    ),\r\n    RiskColor,\r\n    Size",
+      "id": "963755c2-fa2a-4978-add5-aedf748b253e",
+      "usedVariables": []
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "6d0f7d51-1153-4adb-9882-a995661a5c1d"
+      },
+      "text": "EnhancedTrafficEvents\n   | where Timestamp > ago(5m)\n   | where TrafficDensity >= 80\n   | summarize HighRiskCount = count()",
+      "id": "d6079c87-cd79-44e9-853f-5afa509f5bca",
+      "usedVariables": []
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "6d0f7d51-1153-4adb-9882-a995661a5c1d"
+      },
+      "text": "EnhancedTrafficEvents\n| where Timestamp > ago(1h)                               \n| summarize \n    AvgDensity = round(avg(TrafficDensity), 1),           \n    AvgRiskScore = round(avg(RiskScore), 3),          \n    HighRiskRate = round(countif(RiskLevel == \"High\") * 100.0 / count(), 1), \n    AlertCount = countif(AlertTriggered)                \n    by bin(Timestamp, 5m), RoadName                       \n| order by Timestamp asc\n| render timechart with (title=\"Traffic Density & Risk Trends\") ",
+      "id": "bfaa6bd9-fcf9-4ba7-ae6a-dd7950ad2b61",
+      "usedVariables": []
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "6d0f7d51-1153-4adb-9882-a995661a5c1d"
+      },
+      "text": "EnhancedTrafficEvents\n| where Timestamp > ago(10m)\n| order by Timestamp desc\n| project \n    Time = format_datetime(Timestamp, 'HH:mm:ss'),\n    Location = strcat(LocationName, \" (\", RoadName, \")\"),  \n    Density = TrafficDensity,\n    Weather,\n    RiskLevel = RiskLevel,                                 \n    RiskScore = round(RiskScore, 2),                       \n    Confidence = round(Confidence, 2),                    \n    Alert = iff(AlertTriggered, \"🚨\", \"\"),                 \n    RiskDisplay = case(                                   \n        RiskLevel == \"High\", \"HIGH\",\n        RiskLevel == \"Medium\", \"MEDIUM\", \n        \"LOW\"\n    )\n| take 20                                                ",
+      "id": "b19f6d0d-5782-4cc7-aec8-05baa9f6210d",
+      "usedVariables": []
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "6d0f7d51-1153-4adb-9882-a995661a5c1d"
+      },
+      "text": "EnhancedTrafficEvents\n| where Timestamp > ago(2h)                             \n| summarize \n    EventCount = count(),\n    AvgDensity = round(avg(TrafficDensity), 1),         \n    AvgRiskScore = round(avg(RiskScore), 3),       \n    HighRiskPercentage = round(countif(RiskLevel == \"High\") * 100.0 / count(), 1),\n    AlertRate = round(countif(AlertTriggered) * 100.0 / count(), 1) \n    by Weather\n| order by AvgRiskScore desc                          ",
+      "id": "48587827-7481-4d33-9082-a436877d6f84",
+      "usedVariables": []
+    }
+  ]
+}

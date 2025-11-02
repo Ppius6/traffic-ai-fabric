@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Eventstream",
+    "displayName": "NairobiTrafficStream"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "c9f52d09-defa-96bb-4239-5e2cc46ae1bb"
+  }
+}
