@@ -1,0 +1,5 @@
+// KQL script
+// Use management commands in this script to configure your database items, such as tables, functions, materialized views, and more.
+
+
+.create-merge table EnhancedTrafficEvents (PredictionId:string, Timestamp:datetime, EventId:string, LocationName:string, RoadName:string, Latitude:real, Longitude:real, RiskLevel:string, RiskScore:real, RiskProbabilityHigh:real, RiskProbabilityMedium:real, RiskProbabilityLow:real, Confidence:real, PrimaryFactors:string, AIExplanation:string, TrafficDensity:int, Weather:string, Hour:int, AlertTriggered:bool, AlertSentTime:datetime) 

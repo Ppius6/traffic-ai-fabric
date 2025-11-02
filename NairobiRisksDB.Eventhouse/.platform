@@ -1,0 +1,12 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Eventhouse",
+    "displayName": "NairobiRisksDB",
+    "description": "NairobiRisksDB"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "34b476f9-c522-80f0-466b-f8f1206331d0"
+  }
+}

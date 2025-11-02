@@ -1,0 +1,12 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "KQLDashboard",
+    "displayName": "Nairobi Traffic Risk Intelligence",
+    "description": "Nairobi Traffic Risk Intelligence"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "ad90ce63-20b0-ad5e-45ac-3e753ab8e627"
+  }
+}

@@ -1,0 +1,197 @@
+{
+  "sources": [
+    {
+      "id": "76ffeada-89c6-4e5d-90f8-d68ad7804e7b",
+      "name": "TrafficSimulator",
+      "type": "CustomEndpoint",
+      "properties": {}
+    }
+  ],
+  "destinations": [
+    {
+      "id": "3968ef96-b980-43a5-a00c-96b4a5b59d06",
+      "name": "Eventhouse",
+      "type": "Eventhouse",
+      "properties": {
+        "dataIngestionMode": "ProcessedIngestion",
+        "workspaceId": "00000000-0000-0000-0000-000000000000",
+        "itemId": "473e52c3-2ceb-a303-49ca-35febd9dbd5e",
+        "databaseName": "NairobiRisksDB",
+        "tableName": "EnhancedTrafficEvents",
+        "inputSerialization": {
+          "type": "Json",
+          "properties": {
+            "encoding": "UTF8"
+          }
+        }
+      },
+      "inputNodes": [
+        {
+          "name": "NairobiTrafficStream-stream"
+        }
+      ],
+      "inputSchemas": [
+        {
+          "name": "NairobiTrafficStream-stream",
+          "schema": {
+            "columns": [
+              {
+                "name": "PredictionId",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "Timestamp",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "EventId",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "LocationName",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "RoadName",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "Latitude",
+                "type": "Float",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "Longitude",
+                "type": "Float",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "RiskLevel",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "RiskScore",
+                "type": "Float",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "RiskProbabilityHigh",
+                "type": "BigInt",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "RiskProbabilityMedium",
+                "type": "BigInt",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "RiskProbabilityLow",
+                "type": "BigInt",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "Confidence",
+                "type": "BigInt",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "PrimaryFactors",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "AIExplanation",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "TrafficDensity",
+                "type": "BigInt",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "Weather",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "Hour",
+                "type": "BigInt",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "AlertTriggered",
+                "type": "BigInt",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "AlertSentTime",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "EventProcessedUtcTime",
+                "type": "DateTime",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "PartitionId",
+                "type": "BigInt",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "EventEnqueuedUtcTime",
+                "type": "DateTime",
+                "fields": null,
+                "items": null
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "streams": [
+    {
+      "id": "09c393f8-4ed8-4c0e-b5dd-7660858d7d1b",
+      "name": "NairobiTrafficStream-stream",
+      "type": "DefaultStream",
+      "properties": {},
+      "inputNodes": [
+        {
+          "name": "TrafficSimulator"
+        }
+      ]
+    }
+  ],
+  "operators": [],
+  "compatibilityLevel": "1.1"
+}

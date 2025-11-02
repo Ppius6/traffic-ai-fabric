@@ -1,0 +1,22 @@
+{
+  "queryset": {
+    "version": "1.0.0",
+    "dataSources": [
+      {
+        "id": "8eab6e19-39fa-426a-a5fe-c3fdfcf45b61",
+        "clusterUri": "https://trd-4cnm316en84vzx7th1.z0.kusto.fabric.microsoft.com",
+        "type": "Fabric",
+        "databaseItemId": "bd9dbd5e-35fe-49ca-a303-2ceb473e52c3",
+        "databaseItemName": "NairobiRisksDB"
+      }
+    ],
+    "tabs": [
+      {
+        "id": "26436481-45f9-4f5b-93c7-789d87960dd2",
+        "content": ".create table EnhancedTrafficEvents (\n    // Core Event Identifiers\n    PredictionId: string,\n    Timestamp: datetime,\n    EventId: string,    \n    // Location Information\n    LocationName: string,\n    RoadName: string,\n    Latitude: real,\n    Longitude: real,    \n    // AI Risk Predictions\n    RiskLevel: string,                  // \"High\", \"Medium\", \"Low\"\n    RiskScore: real,                    // 0.0 to 1.0\n    RiskProbabilityHigh: real,          // Probability of high risk\n    RiskProbabilityMedium: real,        // Probability of medium risk  \n    RiskProbabilityLow: real,           // Probability of low risk\n    Confidence: real,                   // Model confidence 0.0 to 1.0\n    PrimaryFactors: string,             // Key risk factors identified\n    AIExplanation: string,              // AI model explanation    \n    // Traffic Metrics\n    TrafficDensity: int,                // Traffic density percentage\n    Weather: string,                    // Weather conditions\n    Hour: int,                          // Hour of day (0-23)    \n    // Alert System\n    AlertTriggered: bool,               // Whether alert was triggered\n    AlertSentTime: datetime             // When alert was sent (nullable)\n)\n",
+        "title": "Tab",
+        "dataSourceId": "8eab6e19-39fa-426a-a5fe-c3fdfcf45b61"
+      }
+    ]
+  }
+}
